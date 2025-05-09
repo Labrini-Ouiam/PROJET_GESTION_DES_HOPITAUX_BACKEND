@@ -6,15 +6,14 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-@Data @NoArgsConstructor @AllArgsConstructor
+@Data
 public class Fichier {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idFichier;
-    private LocalDate date;
-    private String path;
-    private boolean s = false;
-    private int codeUser;
-    private LocalDateTime dateLastAction = LocalDateTime.now();
+    private String nom;
+    private String type;
+    private String chemin;
+    private LocalDateTime dateUpload;
 
     @ManyToOne
     private DossierMedical dossierMedical;
