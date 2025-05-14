@@ -10,7 +10,7 @@ public class InterventionMedicalMapper {
     public InterventionMedicalDTO toDto(InterventionMedical entity) {
         InterventionMedicalDTO dto = new InterventionMedicalDTO();
         BeanUtils.copyProperties(entity, dto);
-        dto.setId(entity.getIdInterventionMedical());
+        dto.setIdInterventionMedical(entity.getIdInterventionMedical());
         if (entity.getDossierMedical() != null) {
             dto.setDossierMedicalId(entity.getDossierMedical().getIdDossierMedical());
             if (entity.getDossierMedical().getPatient() != null) {
@@ -18,14 +18,14 @@ public class InterventionMedicalMapper {
                 dto.setPatientPrenom(entity.getDossierMedical().getPatient().getPrenom());
             }
         }
-        dto.setDateIntervention(entity.getDate());
+        dto.setDate(entity.getDate());
         return dto;
     }
 
     public InterventionMedical toEntity(InterventionMedicalDTO dto) {
         InterventionMedical entity = new InterventionMedical();
         BeanUtils.copyProperties(dto, entity);
-        entity.setIdInterventionMedical(dto.getId());
+        entity.setIdInterventionMedical(dto.getIdInterventionMedical());
         return entity;
     }
 }

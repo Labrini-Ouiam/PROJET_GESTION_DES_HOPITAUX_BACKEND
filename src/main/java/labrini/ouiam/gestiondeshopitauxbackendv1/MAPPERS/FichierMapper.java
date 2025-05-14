@@ -10,7 +10,7 @@ public class FichierMapper {
     public FichierDTO toDto(Fichier entity) {
         FichierDTO dto = new FichierDTO();
         BeanUtils.copyProperties(entity, dto);
-        dto.setId(entity.getIdFichier());
+        dto.setIdFichier(entity.getIdFichier());
         dto.setChemin(entity.getChemin());
         if (entity.getDossierMedical() != null) {
             dto.setDossierMedicalId(entity.getDossierMedical().getIdDossierMedical());
@@ -29,7 +29,7 @@ public class FichierMapper {
     public Fichier toEntity(FichierDTO dto) {
         Fichier entity = new Fichier();
         BeanUtils.copyProperties(dto, entity);
-        entity.setIdFichier(dto.getId());
+        entity.setIdFichier(dto.getIdFichier());
         return entity;
     }
 }

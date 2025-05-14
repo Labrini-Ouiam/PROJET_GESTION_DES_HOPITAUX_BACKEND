@@ -10,7 +10,7 @@ public class ResultatExamenMapper {
     public ResultatExamenDTO toDto(ResultatExamen entity) {
         ResultatExamenDTO dto = new ResultatExamenDTO();
         BeanUtils.copyProperties(entity, dto);
-        dto.setId(entity.getIdResultatExamen());
+        dto.setIdResultatExamen(entity.getIdResultatExamen());
         if (entity.getDossierMedical() != null) {
             dto.setDossierMedicalId(entity.getDossierMedical().getIdDossierMedical());
             dto.setDossierMedicalDescription(entity.getDossierMedical().getDescription());
@@ -22,7 +22,7 @@ public class ResultatExamenMapper {
     public ResultatExamen toEntity(ResultatExamenDTO dto) {
         ResultatExamen entity = new ResultatExamen();
         BeanUtils.copyProperties(dto, entity);
-        entity.setIdResultatExamen(dto.getId());
+        entity.setIdResultatExamen(dto.getIdResultatExamen());
         return entity;
     }
 }

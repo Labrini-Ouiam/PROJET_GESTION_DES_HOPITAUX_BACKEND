@@ -5,7 +5,6 @@ import lombok.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-/*
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
 public class Diagnostic {
@@ -14,21 +13,6 @@ public class Diagnostic {
     private LocalDate date;
     private String description;
     private boolean s = false;
-    private int codeUser;
-    private LocalDateTime dateLastAction = LocalDateTime.now();
-
-    @ManyToOne
-    private DossierMedical dossierMedical;
-}
-*/
-@Entity
-@Data @NoArgsConstructor @AllArgsConstructor
-public class Diagnostic {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idDiagnostic;
-    private LocalDate date;
-    private String description;
-    private boolean active = false;
     private int codeUser;
     private LocalDateTime dateLastAction = LocalDateTime.now();
 

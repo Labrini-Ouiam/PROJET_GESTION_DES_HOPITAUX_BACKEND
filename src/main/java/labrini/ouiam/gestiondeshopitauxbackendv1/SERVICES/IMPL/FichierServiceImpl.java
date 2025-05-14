@@ -158,7 +158,7 @@ public class FichierServiceImpl implements FichierService {
             fichier.setNom(file.getOriginalFilename());
             fichier.setType(file.getContentType());
             fichier.setChemin(filePath.toString());
-            fichier.setDateUpload(LocalDateTime.now());
+            fichier.setDateLastAction(LocalDateTime.now());
             fichier.setDossierMedical(dossier);
             fichier.setCategorieFichier(categorie);
             fichier.setTypeFichier(typeFichier);

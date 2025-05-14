@@ -10,22 +10,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
-//@Data
-//public class PrescriptionMedical {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long idPrescriptionMedical;
-//    private LocalDate date;
-//    private String description;
-//    private LocalDateTime dateLastAction;
-//    @ManyToOne
-//    //@JoinColumn(name = "dossier_medical_id")
-//    private DossierMedical dossierMedical;
-//
-//    @OneToMany(mappedBy = "prescription", cascade = CascadeType.ALL, orphanRemoval = true)
-//    private List<PrescriptionMedicamentDetail> medicaments;
-//}
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
@@ -34,7 +18,7 @@ public class PrescriptionMedical {
     private Long idPrescriptionMedical;
     private LocalDate date;
     private String description;
-    private boolean active = false;
+    private boolean s = false;
     private int codeUser;
     private LocalDateTime dateLastAction = LocalDateTime.now();
 

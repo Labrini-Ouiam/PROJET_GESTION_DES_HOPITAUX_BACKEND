@@ -26,7 +26,7 @@ public class ResultatExamen {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idResultatExamen;
     private String description;
-    private boolean active = false;
+    private boolean s = false;
     private int codeUser;
     private LocalDateTime dateLastAction = LocalDateTime.now();
 

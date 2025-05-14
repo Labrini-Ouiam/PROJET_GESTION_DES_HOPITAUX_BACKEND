@@ -13,7 +13,7 @@ public class Fichier {
     private String nom;
     private String type;
     private String chemin;
-    private LocalDateTime dateUpload;
+    private LocalDateTime dateLastAction;
 
     @ManyToOne
     private DossierMedical dossierMedical;

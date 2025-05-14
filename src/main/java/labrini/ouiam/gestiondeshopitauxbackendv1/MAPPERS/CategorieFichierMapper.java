@@ -10,14 +10,14 @@ public class CategorieFichierMapper {
     public CategorieFichierDTO toDto(CategorieFichier entity) {
         CategorieFichierDTO dto = new CategorieFichierDTO();
         BeanUtils.copyProperties(entity, dto);
-        dto.setId(entity.getIdCategorieFichier());
+        dto.setIdCategorieFichier(entity.getIdCategorieFichier());
         return dto;
     }
 
     public CategorieFichier toEntity(CategorieFichierDTO dto) {
         CategorieFichier entity = new CategorieFichier();
         BeanUtils.copyProperties(dto, entity);
-        entity.setIdCategorieFichier(dto.getId());
+        entity.setIdCategorieFichier(dto.getIdCategorieFichier());
         return entity;
     }
 }

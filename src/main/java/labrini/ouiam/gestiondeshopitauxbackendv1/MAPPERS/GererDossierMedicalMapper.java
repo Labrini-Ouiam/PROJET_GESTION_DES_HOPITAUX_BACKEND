@@ -10,7 +10,7 @@ public class GererDossierMedicalMapper {
     public GererDossierMedicalDTO toDto(GererDossierMedical entity) {
         GererDossierMedicalDTO dto = new GererDossierMedicalDTO();
         BeanUtils.copyProperties(entity, dto);
-        dto.setId(entity.getIdGererDossierMedical());
+        dto.setIdGererDossierMedical(entity.getIdGererDossierMedical());
         if (entity.getDossierMedical() != null) {
             dto.setDossierMedicalId(entity.getDossierMedical().getIdDossierMedical());
         }
@@ -23,7 +23,7 @@ public class GererDossierMedicalMapper {
     public GererDossierMedical toEntity(GererDossierMedicalDTO dto) {
         GererDossierMedical entity = new GererDossierMedical();
         BeanUtils.copyProperties(dto, entity);
-        entity.setIdGererDossierMedical(dto.getId());
+        entity.setIdGererDossierMedical(dto.getIdGererDossierMedical());
         return entity;
     }
 }

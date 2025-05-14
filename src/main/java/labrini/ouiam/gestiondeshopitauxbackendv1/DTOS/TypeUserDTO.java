@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class TypeUserDTO {
-    private Long id;
+    private Long idTypeUser;
     private String role;
 }

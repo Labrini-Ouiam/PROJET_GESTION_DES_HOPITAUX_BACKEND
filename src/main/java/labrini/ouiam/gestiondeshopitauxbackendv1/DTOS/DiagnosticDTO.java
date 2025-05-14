@@ -1,33 +1,25 @@
 package labrini.ouiam.gestiondeshopitauxbackendv1.DTOS;
-
+import jakarta.persistence.ManyToOne;
+import labrini.ouiam.gestiondeshopitauxbackendv1.ENTITIES.DossierMedical;
+import labrini.ouiam.gestiondeshopitauxbackendv1.ENTITIES.Utilisateur;
 import lombok.Data;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-//@Data
-//public class DiagnosticDTO {
-//    private Long id;
-//    private Long dossierMedicalId;
-//    private String patientNom; // Ajout de cette propriété
-//    private String patientPrenom;
-//    private String description;
-//    private String medecinDiagnostiqueur;
-//    private String dateDiagnostic;
-//}
 
 @Data
 public class DiagnosticDTO {
-    private Long id;
-    private LocalDate date;
-    private String description;
-    private boolean active;
+    private Long idDiagnostic;
     private LocalDateTime dateLastAction;
+    private String description;
+    private int codeUser;
 
+    private boolean s;
     private Long dossierMedicalId;
     private Long medecinId;
-
-    // Additional info for display
     private String dossierMedicalDescription;
     private String medecinNomComplet;
+
+    private LocalDate date;
 }

@@ -10,7 +10,7 @@ public class DiagnosticMapper {
     public DiagnosticDTO toDto(Diagnostic entity) {
         DiagnosticDTO dto = new DiagnosticDTO();
         BeanUtils.copyProperties(entity, dto);
-        dto.setId(entity.getIdDiagnostic());
+        dto.setIdDiagnostic(entity.getIdDiagnostic());
         dto.setDossierMedicalId(entity.getDossierMedical().getIdDossierMedical());
         return dto;
     }
@@ -18,7 +18,7 @@ public class DiagnosticMapper {
     public Diagnostic toEntity(DiagnosticDTO dto) {
         Diagnostic entity = new Diagnostic();
         BeanUtils.copyProperties(dto, entity);
-        entity.setIdDiagnostic(dto.getId());
+        entity.setIdDiagnostic(dto.getIdDiagnostic());
         return entity;
     }
 }

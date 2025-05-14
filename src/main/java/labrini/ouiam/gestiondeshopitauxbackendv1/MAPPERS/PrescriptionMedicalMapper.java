@@ -10,7 +10,7 @@ public class PrescriptionMedicalMapper {
     public PrescriptionMedicalDTO toDto(PrescriptionMedical entity) {
         PrescriptionMedicalDTO dto = new PrescriptionMedicalDTO();
         BeanUtils.copyProperties(entity, dto);
-        dto.setId(entity.getIdPrescriptionMedical());
+        dto.setIdPrescriptionMedical(entity.getIdPrescriptionMedical());
         if (entity.getDossierMedical() != null) {
             dto.setDossierMedicalId(entity.getDossierMedical().getIdDossierMedical());
         }
@@ -20,7 +20,7 @@ public class PrescriptionMedicalMapper {
     public PrescriptionMedical toEntity(PrescriptionMedicalDTO dto) {
         PrescriptionMedical entity = new PrescriptionMedical();
         BeanUtils.copyProperties(dto, entity);
-        entity.setIdPrescriptionMedical(dto.getId());
+        entity.setIdPrescriptionMedical(dto.getIdPrescriptionMedical());
         return entity;
     }
 }

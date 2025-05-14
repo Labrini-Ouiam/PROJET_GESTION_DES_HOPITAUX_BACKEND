@@ -12,6 +12,7 @@ public class DossierMedical {
     private Long idDossierMedical;
     private String description;
     private LocalDateTime dateLastAction;
+    private boolean s = false;
 
     @ManyToOne
     private Utilisateur patient;

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/diagnostics")
+@RequestMapping("/diagnostics")
 public class DiagnosticController {
 
     private final DiagnosticService diagnosticService;
@@ -20,6 +20,11 @@ public class DiagnosticController {
     @PostMapping
     public ResponseEntity<DiagnosticDTO> createDiagnostic(@RequestBody DiagnosticDTO diagnosticDTO) {
         return ResponseEntity.ok(diagnosticService.createDiagnostic(diagnosticDTO));
+    }
+
+    @GetMapping("/diagnostices")
+    public ResponseEntity<List<DiagnosticDTO>> getAllDiagnostics() {
+        return ResponseEntity.ok(diagnosticService.getAllDiagnostics());
     }
 
     @GetMapping("/{id}")

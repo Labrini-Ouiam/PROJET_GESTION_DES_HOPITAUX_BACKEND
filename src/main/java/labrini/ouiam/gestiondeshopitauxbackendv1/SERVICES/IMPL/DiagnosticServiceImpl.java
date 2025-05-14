@@ -169,6 +169,15 @@ public class DiagnosticServiceImpl implements DiagnosticService {
             dto.setMedecinNomComplet(diagnostic.getMedecin().getNom() + " " + diagnostic.getMedecin().getPrenom());
         }
 
+
+
         return dto;
+    }
+
+    @Override
+    public List<DiagnosticDTO> getAllDiagnostics() {
+        return diagnosticRepository.findAll().stream()
+                .map(this::toDto)
+                .collect(Collectors.toList());
     }
 }

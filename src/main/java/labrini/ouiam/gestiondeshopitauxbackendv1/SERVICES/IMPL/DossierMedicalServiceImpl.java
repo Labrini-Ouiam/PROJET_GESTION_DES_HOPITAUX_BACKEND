@@ -94,7 +94,7 @@ public class DossierMedicalServiceImpl implements DossierMedicalService {
             fichier.setNom(file.getOriginalFilename());
             fichier.setType(file.getContentType());
             fichier.setChemin(fileName);
-            fichier.setDateUpload(LocalDateTime.now());
+            fichier.setDateLastAction(LocalDateTime.now());
             fichier.setDossierMedical(dossier);
 
             fichierRepository.save(fichier);

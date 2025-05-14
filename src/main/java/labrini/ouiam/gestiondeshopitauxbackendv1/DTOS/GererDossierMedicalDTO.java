@@ -1,5 +1,8 @@
 package labrini.ouiam.gestiondeshopitauxbackendv1.DTOS;
 
+import jakarta.persistence.ManyToOne;
+import labrini.ouiam.gestiondeshopitauxbackendv1.ENTITIES.DossierMedical;
+import labrini.ouiam.gestiondeshopitauxbackendv1.ENTITIES.Utilisateur;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -32,10 +35,10 @@ public class GererDossierMedicalDTO {
 }*/
 @Data
 public class GererDossierMedicalDTO {
-    private Long id;
+    private Long idGererDossierMedical;
     private LocalDate dateAssignation;
     private String roleGestion;
-    private boolean active;
+    private boolean s;
     private int codeUser;
     private LocalDateTime dateLastAction;
 
@@ -45,4 +48,5 @@ public class GererDossierMedicalDTO {
     // Additional info for display
     private String utilisateurNomComplet;
     private String dossierMedicalDescription;
+
 }

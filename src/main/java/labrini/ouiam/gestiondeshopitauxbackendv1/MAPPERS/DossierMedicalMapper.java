@@ -10,11 +10,16 @@ public class DossierMedicalMapper {
     public DossierMedicalDTO toDto(DossierMedical entity) {
         DossierMedicalDTO dto = new DossierMedicalDTO();
         BeanUtils.copyProperties(entity, dto);
-        dto.setId(entity.getIdDossierMedical());
+        dto.setIdDossierMedical(entity.getIdDossierMedical());
         if (entity.getPatient() != null) {
             dto.setPatientId(entity.getPatient().getIdUtilisateur());
             dto.setPatientNom(entity.getPatient().getNom());
             dto.setPatientPrenom(entity.getPatient().getPrenom());
+            dto.setDiagnostics(entity.getDiagnostics());
+            dto.setFichiers(entity.getFichiers());
+            dto.setResultats(entity.getResultats());
+            dto.setInterventions(entity.getInterventions());
+            dto.setPrescriptions(entity.getPrescriptions());
         }
         return dto;
     }
@@ -22,7 +27,7 @@ public class DossierMedicalMapper {
     public DossierMedical toEntity(DossierMedicalDTO dto) {
         DossierMedical entity = new DossierMedical();
         BeanUtils.copyProperties(dto, entity);
-        entity.setIdDossierMedical(dto.getId());
+        entity.setIdDossierMedical(dto.getIdDossierMedical());
         return entity;
     }
 }

@@ -32,7 +32,7 @@ public class GererDossierMedical {
     private Long idGererDossierMedical;
     private LocalDate dateAssignation;
     private String roleGestion;
-    private boolean active = false;
+    private boolean s = false;
     private int codeUser;
     private LocalDateTime dateLastAction = LocalDateTime.now();
 

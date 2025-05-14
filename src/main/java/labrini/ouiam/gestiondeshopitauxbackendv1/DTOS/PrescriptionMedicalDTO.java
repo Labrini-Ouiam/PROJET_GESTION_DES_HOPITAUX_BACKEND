@@ -1,28 +1,24 @@
 package labrini.ouiam.gestiondeshopitauxbackendv1.DTOS;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import labrini.ouiam.gestiondeshopitauxbackendv1.ENTITIES.DossierMedical;
+import labrini.ouiam.gestiondeshopitauxbackendv1.ENTITIES.PrescriptionMedicamentDetail;
+import labrini.ouiam.gestiondeshopitauxbackendv1.ENTITIES.Utilisateur;
 import lombok.Data;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
-
-//@Data
-//public class PrescriptionMedicalDTO {
-//    private Long id;
-//    private LocalDate date;
-//    private String description;
-//    private Long dossierId;
-//    private String patientNom;
-//    private String medecinPrescripteur;
-//    private List<PrescriptionMedicamentDetailDTO> medicaments;
-//}
 
 @Data
 public class PrescriptionMedicalDTO {
-    private Long id;
+    private Long idPrescriptionMedical;
     private LocalDate date;
     private String description;
-    private boolean active;
+    private boolean s;
     private LocalDateTime dateLastAction;
 
     private Long dossierMedicalId;

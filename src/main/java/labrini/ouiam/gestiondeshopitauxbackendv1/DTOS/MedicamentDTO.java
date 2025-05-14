@@ -1,22 +1,21 @@
 package labrini.ouiam.gestiondeshopitauxbackendv1.DTOS;
 
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import labrini.ouiam.gestiondeshopitauxbackendv1.ENTITIES.InterventionMedical;
+import labrini.ouiam.gestiondeshopitauxbackendv1.ENTITIES.PrescriptionMedicamentDetail;
 import lombok.Data;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 public class MedicamentDTO {
-    private Long id;
-
-    @NotBlank(message = "Le nom du médicament est obligatoire")
-    @Size(max = 100, message = "Le nom ne peut pas dépasser 100 caractères")
+    private Long idMedicament;
     private String nom;
-
-    @Size(max = 500, message = "La description ne peut pas dépasser 500 caractères")
     private String description;
 
-    private boolean active;
+    private boolean s;
     private int codeUser;
     private LocalDateTime dateLastAction;
 
@@ -26,6 +25,8 @@ public class MedicamentDTO {
     }
 
     public String getStatut() {
-        return active ? "Actif" : "Inactif";
+        return s ? "Actif" : "Inactif";
     }
+    private List<PrescriptionMedicamentDetail> prescriptions;
+
 }
